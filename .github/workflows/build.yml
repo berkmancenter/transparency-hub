@@ -1,0 +1,65 @@
+name: Run full build
+on:
+  push:
+    branches:
+      # All branches 
+      # TODO: unsure if this is necessary, but for now it's fine
+      - '*' 
+env:
+  NODE_ENV: production
+  # DB_URI: ${{ secrets.DB_URI }}
+
+jobs:
+  setup:
+    # Do not run on automated commits (interpretation of TravisCI feature)
+    if: contains(github.event.head_commit.message, 'skip ci') == false && github.actor != 'dependabot[bot]'
+    name: Setup build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Checkout code on HEAD
+        uses: actions/checkout@v4
+        if: ${{ github.event_name != 'pull_request' }}
+        with:
+          ref: ${{ github.ref }}
+
+      # Do this only for PR to production, since we need to work on main during later commit, and PR's work off of merge ref
+      # - name: Checkout code of PR HEAD
+      #   uses: actions/checkout@v4
+      #   if: ${{ github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' }}
+      #   with:
+      #     ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Setup node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+  run-build:
+    needs: setup
+    name: 'Make build'
+    # Do not run on automated commits (interpretation of TravisCI feature)
+    if: contains(github.event.head_commit.message, 'skip ci') == false && github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    # outputs:
+    #   pa11y_outcome: ${{ steps.pa11y.outcome }}
+    #   lhci_outcome: ${{ steps.lhci.outcome }}
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Setup node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # - name: Install global packages
+      #   run: npm install -g yarn pm2
+
+      - name: Install local packages, make production build
+        run: |
+          npm add typescript @types/node
+          npm i
+          npm run

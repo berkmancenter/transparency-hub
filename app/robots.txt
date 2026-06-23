@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /_vercel/
+
+Sitemap: https://hub.transparency.berkmancenter.org/sitemap.xml

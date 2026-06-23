@@ -1,0 +1,30 @@
+{
+    "settings": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        },
+        "[javascriptreact]": {
+            "editor.formatOnSave": true,
+        },
+        "[typescriptreact]": {
+            "editor.formatOnSave": true,
+            "editor.defaultFormatter": "esbenp.prettier-vscode" 
+        },
+        "debug.internalConsoleOptions": "neverOpen",
+    },
+    "folders": [
+        {
+            "path": "backend",
+            "name": "API"
+        },
+        {
+            "path": "src",
+            "name": "Client"
+        },
+        {
+            "path": ".",
+            "name": "./"
+        }
+    ],
+}

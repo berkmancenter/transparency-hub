@@ -1,0 +1,55 @@
+{
+  "name": "transparency-hub",
+  "version": "0.1.0",
+  "description": "A comprehensive platform for tracking and analyzing platform transparency policies and changes over time",
+  "license": "AGPL-3.0",
+  "author": "Berkman Klein Center for Internet & Society at Harvard University",
+  "homepage": "https://hub.transparency.berkmancenter.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/berkmancenter/transparency_hub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/berkmancenter/transparency_hub/issues"
+  },
+  "keywords": [
+    "transparency",
+    "platform-governance",
+    "policy-tracking",
+    "research",
+    "nextjs",
+    "mongodb"
+  ],
+  "scripts": {
+    "dev": "next dev -p 3002 --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint app/ components/ --ext .js,.jsx,.ts,.tsx"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^5.18.3",
+    "@octokit/core": "^7.0.6",
+    "@vercel/analytics": "^1.6.1",
+    "next": "^16.2.9",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-google-recaptcha-v3": "^1.11.0",
+    "react-scroll-parallax": "^3.5.0",
+    "react-scrollama": "^2.4.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.3",
+    "@tailwindcss/postcss": "^4",
+    "@types/express": "^5.0.6",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^25",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-highlight-words": "^0.20.1",
+    "eslint": "^10.0.0",
+    "eslint-config-next": "^0.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "typescript-eslint": "^8.56.1"
+  }
+}

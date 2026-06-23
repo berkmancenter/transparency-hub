@@ -1,0 +1,274 @@
+<svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="863.2999877929688" height="450">
+<defs id="topdefs-aa182a">
+<g class="clips">
+</g>
+<clipPath id="legendaa182a">
+<rect width="120" height="235" x="0" y="0">
+</rect>
+</clipPath>
+</defs>
+<g class="indicatorlayer">
+</g>
+<g class="layer-above">
+<g class="imagelayer">
+</g>
+<g class="shapelayer">
+</g>
+</g>
+<g class="selectionlayer">
+</g>
+<g class="infolayer">
+<g class="legend" pointer-events="all" transform="translate(746.0600000000001,60)">
+<rect class="bg" shape-rendering="crispEdges" style="stroke: rgb(0, 0, 0); stroke-opacity: 0; fill: rgb(255, 255, 255); fill-opacity: 1; stroke-width: 0px;" width="97" height="235" x="0" y="0">
+</rect>
+<g class="scrollbox" transform="" clip-path="url(#legendaa182a)">
+<text class="legendtitletext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(128, 132, 149); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" data-unformatted="Platform" data-math="N" x="2" y="15.600000000000001">Platform</text>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,30.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="Discord" data-math="N">Discord</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(0, 104, 201); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(0, 104, 201); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,49.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="Google" data-math="N">Google</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(131, 201, 255); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(131, 201, 255); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,68.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="Instagram" data-math="N">Instagram</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(255, 43, 43); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(255, 43, 43); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,87.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="LinkedIn" data-math="N">LinkedIn</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(255, 171, 171); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(255, 171, 171); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,106.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="Meta" data-math="N">Meta</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(41, 176, 157); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(41, 176, 157); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,125.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="Pinterest" data-math="N">Pinterest</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(125, 239, 161); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(125, 239, 161); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,144.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="Reddit" data-math="N">Reddit</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(255, 135, 0); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(255, 135, 0); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,163.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="TikTok" data-math="N">TikTok</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(255, 209, 106); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(255, 209, 106); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,182.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="Twitter" data-math="N">Twitter</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(109, 63, 192); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(109, 63, 192); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,201.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="WhatsApp" data-math="N">WhatsApp</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(213, 218, 229); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(213, 218, 229); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+<g class="groups" transform="">
+<g class="traces" style="opacity: 1;" transform="translate(0,220.1)">
+<text class="legendtext" text-anchor="start" style="font-family: &quot;Source Sans&quot;, sans-serif; font-size: 12px; fill: rgb(38, 39, 48); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="40" y="4.680000000000001" data-unformatted="YouTube" data-math="N">YouTube</text>
+<g class="layers" style="opacity: 1;" transform="translate(0,-0.1999999999999993)">
+<g class="legendfill">
+</g>
+<g class="legendlines">
+<path class="js-line" d="M5,0h30" style="fill: none; stroke: rgb(0, 104, 201); stroke-opacity: 1; stroke-width: 2px;">
+</path>
+</g>
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20,0)" style="opacity: 1; stroke-width: 0px; fill: rgb(0, 104, 201); fill-opacity: 1;" d="M3,0A3,3 0 1,1 0,-3A3,3 0 0,1 3,0Z">
+</path>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;" pointer-events="all" x="0" y="-9.5" width="91.76666259765625" height="19">
+</rect>
+</g>
+</g>
+</g>
+<rect class="scrollbar" rx="20" ry="3" width="0" height="0" style="fill: rgb(128, 139, 164); fill-opacity: 1;" x="0" y="0">
+</rect>
+</g>
+<g class="g-gtitle">
+</g>
+<g class="g-xtitle">
+<text class="xtitle" style="opacity: 1; font-family: &quot;Source Sans&quot;, sans-serif; font-size: 14px; fill: rgb(128, 132, 149); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="400.5" y="417.26633911132814" text-anchor="middle" data-unformatted="Year" data-math="N">Year</text>
+</g>
+<g class="g-ytitle" transform="translate(1.7998046875,0)">
+<text class="ytitle" transform="rotate(-90,13.066796875000001,215)" style="opacity: 1; font-family: &quot;Source Sans&quot;, sans-serif; font-size: 14px; fill: rgb(128, 132, 149); fill-opacity: 1; font-weight: 400; font-style: normal; font-variant: normal; white-space: pre;" x="13.066796875000001" y="215" text-anchor="middle" data-unformatted="Power Balance" data-math="N">Power Balance</text>
+</g>
+</g>
+<g class="menulayer">
+</g>
+<g class="zoomlayer">
+</g>
+</svg>

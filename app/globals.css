@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+:root, body {
+  --background: #000000;
+  --foreground: #ffffff;
+  height:100%;
+  margin: 0;
+  padding:0;
+  width: 100%;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ASML-red: #7C101C;
+  --color-ASML-blue: #09465B;
+  --color-ASML-purple: #622C62;
+  --color-orchid-500: #A349A4;
+  --color-orchid-600: #622C62;
+  --color-orchid-700: #311632;
+  --color-primary-blue: #4D7A8B;
+  --color-alt-blue: #2E4953;
+  --color-removed-red: #FF5F77;
+  --color-added-green: #00FF4C;
+  --color-text-black: #010B13;
+}
+
+#__next {
+ display: flex;
+ flex: 1;
+ flex-direction: column;
+ height: 100%;
+ width: 100%;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@layer utilities {
+  .truncate_content {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+}
+
+replay-web-page {
+  flex: 1;
+  display: flex;
+}
+
+.ASML_Heading {
+  font-family: gotham, sans-serif; 
+  font-weight: 400; 
+  font-style: normal;
+  color: var(--color-foreground);
+}
+
+.ASML_Text {
+  font-family: gotham, sans-serif; 
+  font-weight: 400; 
+  font-style: normal;
+  color: var(--color-foreground);
+}
+
+.ASML_Text.Navigation {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+
+.ASML_Text.Paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.ASML_Text.Paragraph.Bold {
+  font-weight: 700;
+}
+
+.ASML_Text.Paragraph.Links {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* TODO: Fix Scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.5dvw;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #393939;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #878787;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button { 
+     display:none;
+}
+
+.orchid-filter {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(7%) saturate(6955%) hue-rotate(257deg) brightness(96%) contrast(90%);
+}
+
+.scrolly-telling {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scrolly-hero-bg-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scrolly-hero-bg {
+  position: relative;
+  z-index: 1;
+}
+
+.scrolly-hero-bg-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/scrolly/hero-bg.svg');
+  z-index: 1;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+
+.scrolly-fade-text {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.scrolly-fade-image {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.scrolly-fade-nav {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+div {
+}

@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/berkmancenter/transparency_hub/discussions
+    about: Ask questions and discuss with the community
+  - name: 📚 Documentation
+    url: https://hub.transparency.berkmancenter.org
+    about: Check out the documentation
+  - name: 🔒 Security Issue
+    url: https://github.com/berkmancenter/transparency_hub/security/policy
+    about: Report a security vulnerability (do not use public issues)
