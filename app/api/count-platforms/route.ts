@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/app/lib/mongodb";
+import { connectToDatabase } from "@/components/lib/mongodb";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function GET(_request: Request) {

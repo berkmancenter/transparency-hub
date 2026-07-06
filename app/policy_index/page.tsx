@@ -6,7 +6,6 @@ import { unstable_cache } from 'next/cache';
 import { getAllPlatforms } from '@/components/lib/getAllPlatforms';
 import { getDatabaseCounts } from '@/components/lib/getDatabaseCounts';
 import { Suspense } from 'react';
-// import PopularPlatforms from '@/components/ui/platform_lookup/PopularPlatforms';
 
 const getCachedPlatforms = unstable_cache(
   () => getAllPlatforms(),

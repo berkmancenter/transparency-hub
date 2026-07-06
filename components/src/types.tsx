@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 
 export type Platform = {
-  _id: ObjectId;
+  _id: ObjectId | string;
   id: string;
   name: string;
   url: string;

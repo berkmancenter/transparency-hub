@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/app/lib/mongodb";
+import { connectToDatabase } from "./mongodb";
 
 export async function getDatabaseCounts(): Promise<{ company_count: number; document_count: number, years_old: number }> {
   const dbConnection = await connectToDatabase();

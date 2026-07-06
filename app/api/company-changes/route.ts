@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../../../components/lib/mongodb";
+import { connectToDatabase } from "@/components/lib/mongodb";
 
 type Changes = {
   older_document: {

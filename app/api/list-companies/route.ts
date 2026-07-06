@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../../../components/lib/mongodb";
+import { connectToDatabase } from "@/components/lib/mongodb";
 
 function escapeRegex(text: string): string {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');

@@ -66,14 +66,22 @@ export default function DocTypeBlob({
           </div>
           <div className="grid grid-cols-3 items-center justify-center gap-2">
             {
-              Object.keys(TypeIndex[version]).map((key, index) => (
-                <Link
-                  key={index}
-                  href={TypeIndex[version][key]}
-                  target="_blank" rel="noopener noreferrer"
-                  className="flex items-center justify-center p-3 border-1 border-[#FFFFFF] rounded-[8px] ASML_Text Paragragh uppercase hover:bg-orchid-600">
-                  {key === 'warc.json' ? 'json' : key}
-                </Link>
+              Object.keys(TypeIndex[version])
+                .sort((a, b) => {
+                  // define a specific order the keys should be displayed
+                  const order = ["txt", "warc.json", "html", "warc", "pdf"]
+                  const indexA = order.indexOf(a);
+                  const indexB = order.indexOf(b);
+                  return indexA - indexB
+                })
+                .map((key, index) => (
+                  <Link
+                    key={index}
+                    href={TypeIndex[version][key]}
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center justify-center p-3 border-1 border-[#FFFFFF] rounded-[8px] ASML_Text Paragragh uppercase hover:bg-orchid-600">
+                    {key === 'warc.json' ? 'json' : key}
+                  </Link>
               ))
             }
           </div>

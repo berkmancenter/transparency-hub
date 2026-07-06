@@ -10,6 +10,11 @@ export async function getAllPlatforms(): Promise<Platform[]> {
     .find({})
     .sort({ name: 1 })
     .toArray();
+  
+    // Convert _id to id
+    results.forEach((result) => {
+      result._id = result._id.toString();
+    });
 
   return results;
 }
