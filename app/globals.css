@@ -63,8 +63,8 @@ replay-web-page {
 }
 
 .ASML_Heading {
-  font-family: gotham, sans-serif; 
-  font-weight: 400; 
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 400;
   font-style: normal;
   color: var(--color-foreground);
 }
@@ -189,7 +189,4 @@ replay-web-page {
   animation-duration: 3s;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
-}
-
-div {
 }

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import BasicDropdown from "@/components/lib/BasicDropdown";
+import HelpTooltip from "@/components/lib/HelpTooltip";
 
 export default function DocTypeBlob({
   name,
@@ -38,7 +39,7 @@ export default function DocTypeBlob({
   const details_link = details_map[type] ? details_map[type] : "/about/understanding-policies#other";
 
   return (
-    <div className="flex flex-col justify-between gap-2 p-4 rounded-[8px] border-1 border-[#AAAAAA] bg-gradient-to-b from-[#FFFFFF1A] to-[#000000]">
+    <div data-help-tooltip-boundary className="flex flex-col justify-between gap-2 p-4 rounded-[8px] border-1 border-[#AAAAAA] bg-gradient-to-b from-[#FFFFFF1A] to-[#000000]">
       <div className="flex flex-col gap-2">
         <div className="flex flex-col gap-0.5">
           <div className="flex flex-row">
@@ -102,14 +103,22 @@ export default function DocTypeBlob({
           </Link>
         }
         {TypeIndex[version]["txt"] === undefined &&
-          <p className="flex items-center justify-center p-3 ASML_Text Paragragh">
+          <div className="flex items-center justify-center gap-2 p-3 ASML_Text Paragragh">
             No TXT comparison available
-          </p>
+            <HelpTooltip
+              title="No Comparison Available"
+              message="This may be due to there being a single version of the policy available or limited versions in the compatible file format (TXT) needed to make comparisons."
+            />
+          </div>
         }
         {TypeIndex[version]["txt"] && (versions.filter(v => TypeIndex[v]["txt"]).length <= 1 && TypeIndex[version]["txt"]) &&
-          <p className="flex items-center justify-center p-3 ASML_Text Paragragh">
+          <div className="flex items-center justify-center gap-2 p-3 ASML_Text Paragragh">
             No comparison available
-          </p>
+            <HelpTooltip
+              title="No Comparison Available"
+              message="This may be due to there being a single version of the policy available or limited versions in the compatible file format (TXT) needed to make comparisons."
+            />
+          </div>
         }
       </div>
     </div>
