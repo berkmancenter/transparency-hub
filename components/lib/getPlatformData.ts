@@ -13,24 +13,30 @@ function formatDate(date: Date): string {
 
 function buildDocumentIndex(documents: PolicyDocument[], typeMapping: Record<string, string>): DocumentIndex {
   return documents.reduce<DocumentIndex>((index, doc) => {
-    const { date_fetched, format, public_url } = doc;
+    const { date_fetched, public_url, formats } = doc;
     const type = typeMapping[doc.type] || doc.type;
     const date = formatDate(date_fetched);
 
     if (!index[type]) index[type] = {};
     if (!index[type][date]) index[type][date] = {};
 
-    index[type][date][format] = public_url;
+    Object.entries(formats).forEach(([format, { extension }]) => {
+      index[type][date][format] = `${public_url}.${extension}`;
+    });
+
     return index;
   }, {});
 }
 
 function buildWaybackIndex(documents: PolicyDocument[], typeMapping: Record<string, string>): WaybackIndex {
   return documents.reduce<WaybackIndex>((index, doc) => {
-    const { date_fetched, original_url } = doc;
+    const { date_fetched, formats } = doc;
     const type = typeMapping[doc.type] || doc.type;
     const date = formatDate(date_fetched);
     const url_date = `${date_fetched.getFullYear()}${String(date_fetched.getMonth() + 1).padStart(2, '0')}${String(date_fetched.getDate()).padStart(2, '0')}000000`;
+
+    const original_url = Object.values(formats)[0]?.original_url;
+    if (!original_url) return index;
 
     if (!index[type]) index[type] = {};
 
@@ -56,7 +62,7 @@ export async function getPlatformData(platformName: string): Promise<{
   if (!company) return null;
 
   const documents = await database
-    .collection<PolicyDocument>('documents')
+    .collection<PolicyDocument>('documents_v2')
     .find({ company_id: company._id.toString() })
     .toArray();
 

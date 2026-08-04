@@ -51,19 +51,23 @@ export default function Researchers() {
 }`}
             </ul>
           </section>
-          <h3 className="ASML_Heading !text-[28px]/[38px] !font-[700]"> 2. Documents</h3>
+          <h3 className="ASML_Heading !text-[28px]/[38px] !font-[700]"> 2. Documents (documents_v2)</h3>
           <section className="ASML_Text Paragraph whitespace-pre-wrap" translate="no">
             <ul> {/* Note that the indentation here is rendered, whitespace edits will modify the website */}
               {`{
       "company_id" : "company_oid",
-      "path" : "company_oid/policy_name/unix_timestamp.file_extension",
+      "path" : "company_oid/policy_name/unix_timestamp",
       "type" : "policy_name",
       "date_fetched" : {
             "$date" : "datetime_object"
       },
       "public_url" : "stored_document_link",
-      "original_url" : "original_live_document_link",
-      "format" : "file_extension"
+      "formats" : {
+            "file_format" : {
+                  "extension" : "file_extension",
+                  "original_url" : "original_live_document_link"
+            }
+      }
 }`}
             </ul>
           </section>
