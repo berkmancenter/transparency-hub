@@ -1,6 +1,7 @@
 import { Platform, DocumentIndex, WaybackIndex } from '@/components/src/types';
 import Link from 'next/link';
 import DocTypeBlob from './DocTypeBlob';
+import ShareMenu from './ShareMenu';
 
 export default function PlatformContent({
   platformName,
@@ -16,15 +17,18 @@ export default function PlatformContent({
   return (
     <div className="flex flex-col gap-9">
       <section className="flex flex-col gap-6">
-        {platform.url ? (
-          <p className="ASML_Text Paragraph">
-            Website:&nbsp;
-            <Link className="underline" href={platform.url}>
-              {platform.url}
-              <img className="inline w-[20px] h-[20px] ml-2 mb-1" src="/policy_index/external-link.svg" alt="" />
-            </Link>
-          </p>
-        ) : null}
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          {platform.url ? (
+            <p className="ASML_Text Paragraph">
+              Website:&nbsp;
+              <Link className="underline" href={platform.url}>
+                {platform.url}
+                <img className="inline w-[20px] h-[20px] ml-2 mb-1" src="/policy_index/external-link.svg" alt="" />
+              </Link>
+            </p>
+          ) : <span />}
+          <ShareMenu platformName={platformName} />
+        </div>
         <Link
           className="flex flex-row flex-shrink w-fit p-3 items-center justify-baseline gap-2 ASML_Text Navigation !text-[14px]/[20px] cursor-pointer bg-ASML-purple rounded-lg border border-[#fbf4f4]"
           href={`/comparison_tool?platform=${encodeURIComponent(platformName)}`}

@@ -10,6 +10,7 @@
 }
 
 @theme {
+  --breakpoint-widget-sm: 26.25rem;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-ASML-red: #7C101C;

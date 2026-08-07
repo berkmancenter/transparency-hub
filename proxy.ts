@@ -9,9 +9,14 @@ export function proxy(request: NextRequest) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow');
   }
 
+  if (request.nextUrl.pathname.startsWith('/widget/')) {
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('X-Frame-Options', 'ALLOWALL');
+  }
+
   return response;
 }
 
 export const config = {
-  matcher: '/api/:path*',
+  matcher: ['/api/:path*', '/widget/:path*'],
 };
