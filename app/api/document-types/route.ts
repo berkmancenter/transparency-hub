@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/app/lib/mongodb";
+import { connectToDatabase } from "@/components/lib/mongodb";
 
 export async function GET(request: Request) {
   try {
@@ -28,10 +28,10 @@ export async function GET(request: Request) {
     
     type ChangeDoc = { type: string; older_date_fetched: string | Date; newer_date_fetched: string | Date };
 
-    const documents = await database.collection('changes')
+    const policy_documents = await database.collection('changes')
       .find({ company_id: company._id.toString() })
       .sort({ type: 1, newer_date_fetched: 1 })
-      .toArray() as ChangeDoc[];
+      .toArray() as unknown as ChangeDoc[];
 
     const typeMapping: Record<string, string> = {};
     const docTypes = Object.keys(company.doc_urls);
@@ -41,7 +41,7 @@ export async function GET(request: Request) {
       typeMapping[dbValue] = displayName;
     });
 
-    const documentsByType = documents.reduce((acc: Record<string, string[]>, doc: ChangeDoc) => {
+    const documentsByType = policy_documents.reduce((acc: Record<string, string[]>, doc: ChangeDoc) => {
       const displayName = typeMapping[doc.type] || doc.type;
 
       if (!acc[displayName]) {

@@ -9,9 +9,16 @@ export function proxy(request: NextRequest) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow');
   }
 
+  if (request.nextUrl.pathname.startsWith('/widget/')) {
+    // No X-Frame-Options header is set here: the widget route exists specifically to be
+    // iframed on third-party sites, and there's no spec-valid value that means "allow
+    // everyone" (only DENY/SAMEORIGIN/ALLOW-FROM) — omitting it is what actually allows framing.
+    response.headers.set('Access-Control-Allow-Origin', '*');
+  }
+
   return response;
 }
 
 export const config = {
-  matcher: '/api/:path*',
+  matcher: ['/api/:path*', '/widget/:path*'],
 };

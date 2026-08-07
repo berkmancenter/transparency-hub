@@ -1,11 +1,11 @@
-import { connectToDatabase } from "@/app/lib/mongodb";
+import { connectToDatabase } from "./mongodb";
 
 export async function getDatabaseCounts(): Promise<{ company_count: number; document_count: number, years_old: number }> {
   const dbConnection = await connectToDatabase();
   if (!dbConnection?.database) throw new Error("Database connection failed");
 
   const companies = await dbConnection.database.collection('companies');
-  const documents = await dbConnection.database.collection('documents');
+  const documents = await dbConnection.database.collection('documents_v2');
 
   const oldestDoc = await documents.find()
     .sort({ date_fetched: 1 })

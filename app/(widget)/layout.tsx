@@ -1,8 +1,7 @@
+
 import type { Metadata } from "next";
-import Script from 'next/script';
 import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
-import ClientLayout from "@/components/ui/ClientLayout";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Transparency Hub",
@@ -42,15 +41,11 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function WidgetLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <script 
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -74,18 +69,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
-        {/* This script is required for the embedded Replay UI, and should be loaded before any other scripts to ensure proper functionality */}
-        <Script
-          src="/replay/ui.js"
-          strategy="beforeInteractive"
-        />
       </head>
       <body>
-        <ClientLayout >
+        <main className="m-0 overflow-hidden bg-transparent">
           {children}
-        </ClientLayout>
+        </main>
         <Analytics />
       </body>
     </html>
-  );
+  )
 }

@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 
 export type Platform = {
-  _id: ObjectId;
+  _id: ObjectId | string;
   id: string;
   name: string;
   url: string;
@@ -23,6 +23,11 @@ export type UrlData = {
   url: string;
 };
 
+export type DocumentFormat = {
+  extension: 'txt' | 'html' | 'pdf' | 'warc.gz' | 'warc.json' | 'wacz';
+  original_url: string;
+};
+
 export type Document = {
   _id: ObjectId;
   company_id: string;
@@ -30,8 +35,9 @@ export type Document = {
   type: string;
   date_fetched: Date;
   public_url: string;
-  original_url: string;
-  format: 'txt' | 'html' | 'wacz' | 'pdf' | 'warc.json';
+  formats: {
+    [key: string]: DocumentFormat;
+  };
 };
 
 export type DocumentTableData = {

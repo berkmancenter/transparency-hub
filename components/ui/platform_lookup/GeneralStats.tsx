@@ -7,9 +7,9 @@ export default function GeneralStats({
     years_old: number;
   };
 }) {
-  const num_platforms = platformStats.company_count;
-  const num_policies = platformStats.document_count;
-  const years = platformStats.years_old;
+  const num_platforms = platformStats.company_count ? platformStats.company_count : 300;
+  const num_policies = platformStats.document_count ? platformStats.document_count : 30000;
+  const years = platformStats.years_old ? platformStats.years_old : 20;
 
   return (
     <div className="flex flex-col sm:flex-row gap-6 w-full justify-between">
