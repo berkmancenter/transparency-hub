@@ -34,11 +34,11 @@ export default async function TransparencyWidget({ params }: { params: Promise<{
   const captureCount = await getCachedCaptureCount(platformName);
   const hubUrl = "https://hub.transparency.berkmancenter.org/policy_index/" + encodeURIComponent(platformName);
 
-  if (!captureCount) notFound();
+  if (captureCount === null) notFound();
 
   return (
     <div
-      className="bg-gradient-to-br from-ASML-blue via-ASML-purple to-ASML-red relative flex w-full max-w-[800px] min-h-[150px] widget-sm:min-h-[190px] rounded-[18px] ASML_Text overflow-hidden"
+      className="bg-gradient-to-br from-ASML-blue via-ASML-purple to-ASML-red relative flex w-full max-w-[800px] h-[150px] widget-sm:h-[190px] rounded-[18px] ASML_Text overflow-hidden"
       role="region"
       aria-label={`${platformName} on Transparency Hub`}
     >

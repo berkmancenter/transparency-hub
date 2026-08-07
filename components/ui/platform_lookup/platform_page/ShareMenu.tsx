@@ -121,7 +121,7 @@ export default function ShareMenu({ platformName }: { platformName: string }) {
         <button
           type="button"
           onClick={handleCopyLink}
-          className="flex items-center gap-2 rounded-[8px] border-1 border-[#FFFFFF] px-3 py-2 ASML_Text !text-[14px]/[20px] hover:bg-orchid-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="flex flex-row flex-shrink w-fit p-3 items-center justify-baseline gap-2 ASML_Text Navigation !text-[14px]/[20px] cursor-pointer bg-ASML-purple rounded-lg border border-[#fbf4f4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           <img className="w-[16px] h-[16px]" src="/link.svg" alt="" aria-hidden="true" />
           {status?.scope === "link" ? "Copied!" : "Copy Link"}
@@ -132,7 +132,7 @@ export default function ShareMenu({ platformName }: { platformName: string }) {
           type="button"
           onClick={() => setEmbedOpen(true)}
           aria-haspopup="dialog"
-          className="flex items-center gap-2 rounded-[8px] border-1 border-[#FFFFFF] px-3 py-2 ASML_Text !text-[14px]/[20px] hover:bg-orchid-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="flex flex-row flex-shrink w-fit p-3 items-center justify-baseline gap-2 ASML_Text Navigation !text-[14px]/[20px] cursor-pointer bg-ASML-purple rounded-lg border border-[#fbf4f4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           <span className="font-bold" aria-hidden="true">{"</>"}</span>
           Embed Page
