@@ -69,11 +69,14 @@ export default function DocTypeBlob({
             {
               Object.keys(TypeIndex[version])
                 .sort((a, b) => {
-                  // define a specific order the keys should be displayed
+                  // define a specific order the keys should be displayed; anything not
+                  // in this list sorts after all of them instead of jumping to the front
                   const order = ["txt", "warc.json", "html", "warc", "pdf"]
                   const indexA = order.indexOf(a);
                   const indexB = order.indexOf(b);
-                  return indexA - indexB
+                  const posA = indexA === -1 ? order.length : indexA;
+                  const posB = indexB === -1 ? order.length : indexB;
+                  return posA - posB
                 })
                 .map((key, index) => (
                   <Link

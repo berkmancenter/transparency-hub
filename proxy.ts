@@ -10,8 +10,10 @@ export function proxy(request: NextRequest) {
   }
 
   if (request.nextUrl.pathname.startsWith('/widget/')) {
+    // No X-Frame-Options header is set here: the widget route exists specifically to be
+    // iframed on third-party sites, and there's no spec-valid value that means "allow
+    // everyone" (only DENY/SAMEORIGIN/ALLOW-FROM) — omitting it is what actually allows framing.
     response.headers.set('Access-Control-Allow-Origin', '*');
-    response.headers.set('X-Frame-Options', 'ALLOWALL');
   }
 
   return response;

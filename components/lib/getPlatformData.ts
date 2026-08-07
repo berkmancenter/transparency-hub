@@ -2,6 +2,10 @@ import { connectToDatabase } from './mongodb';
 import { Platform, Document as PolicyDocument } from '@/components/src/types';
 
 const WAYBACK_URL = 'https://web.archive.org/web/';
+// A capture's formats can carry different original_urls (e.g. a linked PDF vs. the
+// page itself); prefer the webpage snapshot over binary/derived formats when picking
+// the one URL to send a viewer to on Wayback.
+const DOMINANT_FORMAT_ORDER = ['html', 'txt', 'warc.json', 'warc.gz', 'wacz', 'pdf'];
 
 type DocumentIndex = Record<string, Record<string, Record<string, string>>>;
 type WaybackIndex = Record<string, Record<string, string>>;
@@ -35,7 +39,9 @@ function buildWaybackIndex(documents: PolicyDocument[], typeMapping: Record<stri
     const date = formatDate(date_fetched);
     const url_date = `${date_fetched.getFullYear()}${String(date_fetched.getMonth() + 1).padStart(2, '0')}${String(date_fetched.getDate()).padStart(2, '0')}000000`;
 
-    const original_url = Object.values(formats)[0]?.original_url;
+    const dominantFormat = DOMINANT_FORMAT_ORDER.find((format) => formats[format]?.original_url)
+      ?? Object.keys(formats).find((format) => formats[format]?.original_url);
+    const original_url = dominantFormat ? formats[dominantFormat].original_url : undefined;
     if (!original_url) return index;
 
     if (!index[type]) index[type] = {};

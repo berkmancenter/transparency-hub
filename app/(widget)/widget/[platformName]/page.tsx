@@ -93,7 +93,7 @@ export default async function TransparencyWidget({ params }: { params: Promise<{
             >
               {captureCount.toLocaleString()}
             </span>
-            <span className="text-sx tracking-wide text-white/65" aria-hidden="true">
+            <span className="text-xs tracking-wide text-white/65" aria-hidden="true">
               policy captures
             </span>
           </div>

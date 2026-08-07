@@ -10,6 +10,14 @@ const SIZE_OPTIONS = [
   { label: "Large", width: 800 },
 ] as const;
 
+function escapeHtmlAttribute(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 async function copyText(text: string): Promise<boolean> {
   if (navigator.clipboard?.writeText) {
     try {
@@ -50,7 +58,7 @@ export default function ShareMenu({ platformName }: { platformName: string }) {
   // The copyable snippet always targets the real production domain, since that's
   // where the embed will actually be loaded from once pasted into another site.
   const embedSrc = `${SITE_URL}/widget/${encodeURIComponent(platformName)}`;
-  const embedCode = `<iframe src="${embedSrc}" width="${embedWidth}" height="190" style={{ border: "none", display: "block" }} title="${platformName} Transparency Hub widget" loading="lazy"></iframe>`;
+  const embedCode = `<iframe src="${embedSrc}" width="${embedWidth}" height="190" style="border: none; display: block;" title="${escapeHtmlAttribute(platformName)} Transparency Hub widget" loading="lazy"></iframe>`;
   // The live preview, on the other hand, should reflect whatever host is actually serving
   // this page — the /widget route isn't deployed to the production domain yet.
   const previewSrc = embedOpen
