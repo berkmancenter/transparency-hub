@@ -124,28 +124,30 @@ export default function ShareMenu({ platformName }: { platformName: string }) {
   };
 
   return (
-    <div className="relative">
-      <div className="flex items-center gap-3">
-        <button
-          type="button"
-          onClick={handleCopyLink}
-          className="flex flex-row flex-shrink w-fit p-3 items-center justify-baseline gap-2 ASML_Text Navigation !text-[14px]/[20px] cursor-pointer bg-ASML-purple rounded-lg border border-[#fbf4f4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-        >
-          <img className="w-[16px] h-[16px]" src="/link.svg" alt="" aria-hidden="true" />
-          {status?.scope === "link" ? "Copied!" : "Copy Link"}
-        </button>
+    <div className="contents">
+      <button
+        type="button"
+        onClick={handleCopyLink}
+        className="flex flex-row flex-shrink w-full sm:w-fit p-3 items-center justify-center gap-2 ASML_Text Navigation !text-[14px]/[20px] cursor-pointer bg-ASML-purple rounded-lg border border-[#fbf4f4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      >
+        <img className="w-[16px] h-[16px]" src="/link.svg" alt="" aria-hidden="true" />
+        {status?.scope === "link" ? "Copied!" : "Copy Link"}
+      </button>
 
-        <button
-          ref={embedButtonRef}
-          type="button"
-          onClick={() => setEmbedOpen(true)}
-          aria-haspopup="dialog"
-          className="flex flex-row flex-shrink w-fit p-3 items-center justify-baseline gap-2 ASML_Text Navigation !text-[14px]/[20px] cursor-pointer bg-ASML-purple rounded-lg border border-[#fbf4f4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-        >
-          <span className="font-bold" aria-hidden="true">{"</>"}</span>
-          Embed Page
-        </button>
-      </div>
+      <button
+        ref={embedButtonRef}
+        type="button"
+        onClick={() => setEmbedOpen(true)}
+        aria-haspopup="dialog"
+        className="flex flex-row flex-shrink w-full sm:w-fit p-3 items-center justify-center gap-2 ASML_Text Navigation !text-[14px]/[20px] cursor-pointer bg-ASML-purple rounded-lg border border-[#fbf4f4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      >
+        <svg viewBox="0 0 20 16" className="w-[20px] h-[16px]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polyline points="7 3 3 8 7 13" />
+          <line x1="12" y1="2" x2="8" y2="14" />
+          <polyline points="13 3 17 8 13 13" />
+        </svg>
+        Embed Page
+      </button>
 
       <p aria-live="polite" className="sr-only">{status?.message}</p>
 
