@@ -43,10 +43,22 @@ export default function Researchers() {
       "name" : "Platform Name",
       "url" : "https://www.platform.com",
       "doc_urls": {
-            "Terms of Service" : "https://www.platform.com/tos",
-            "Privacy Policy" : "https://www.platform.com/privacy",
-            "Community Guidelines" : "https://www.platform.com/guidelines",
-            "Transparency Report" : "https://www.platform.com/report"
+            "Terms of Service" : {
+                  "name" : "Terms of Service",
+                  "urls" : ["https://www.platform.com/tos"]
+            },
+            "Privacy Policy" : {
+                  "name" : "Privacy Policy",
+                  "urls" : ["https://www.platform.com/privacy"]
+            },
+            "Community Guidelines" : {
+                  "name" : "Community Guidelines",
+                  "urls" : ["https://www.platform.com/guidelines"]
+            },
+            "Transparency Report" : {
+                  "name" : "Transparency Report",
+                  "urls" : ["https://www.platform.com/report"]
+            }
       }
 }`}
             </ul>

@@ -10,9 +10,13 @@ export type Platform = {
     year_launched?: number;
     provider?: string;
     relatedCompanies?: string[];
+    status?: 'Active' | 'Inactive';
   },
   doc_urls: {
-    [key: string]: string
+    [key: string]: {
+      name: string;
+      urls: string[];
+    }
   };
 };
 
