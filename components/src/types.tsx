@@ -25,7 +25,7 @@ export type UrlData = {
 
 export type DocumentFormat = {
   extension: 'txt' | 'html' | 'pdf' | 'warc.gz' | 'warc.json' | 'wacz';
-  original_url: string;
+  original_url: string | string[];
 };
 
 export type Document = {

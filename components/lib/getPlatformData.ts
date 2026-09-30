@@ -10,6 +10,12 @@ const DOMINANT_FORMAT_ORDER = ['html', 'txt', 'warc.json', 'warc.gz', 'wacz', 'p
 type DocumentIndex = Record<string, Record<string, Record<string, string>>>;
 type WaybackIndex = Record<string, Record<string, string>>;
 
+// The engine stores original_url as a list since multi-URL doc types; older records
+// still hold a plain string. Either way, the first URL is the one to link to.
+function firstUrl(url: string | string[] | undefined): string | undefined {
+  return Array.isArray(url) ? url[0] : url;
+}
+
 function formatDate(date: Date): string {
   const d = new Date(date);
   return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}/${d.getFullYear()}`;
@@ -39,9 +45,9 @@ function buildWaybackIndex(documents: PolicyDocument[], typeMapping: Record<stri
     const date = formatDate(date_fetched);
     const url_date = `${date_fetched.getFullYear()}${String(date_fetched.getMonth() + 1).padStart(2, '0')}${String(date_fetched.getDate()).padStart(2, '0')}000000`;
 
-    const dominantFormat = DOMINANT_FORMAT_ORDER.find((format) => formats[format]?.original_url)
-      ?? Object.keys(formats).find((format) => formats[format]?.original_url);
-    const original_url = dominantFormat ? formats[dominantFormat].original_url : undefined;
+    const dominantFormat = DOMINANT_FORMAT_ORDER.find((format) => firstUrl(formats[format]?.original_url))
+      ?? Object.keys(formats).find((format) => firstUrl(formats[format]?.original_url));
+    const original_url = dominantFormat ? firstUrl(formats[dominantFormat].original_url) : undefined;
     if (!original_url) return index;
 
     if (!index[type]) index[type] = {};
