@@ -1,9 +1,8 @@
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import PlatformContent from "@/components/ui/platform_lookup/platform_page/PlatformContent";
 import { Metadata } from "next";
-import { getPlatformData } from "@/components/lib/getPlatformData";
+import { getCachedPlatformData } from "@/components/lib/getPlatformData";
 import { notFound } from "next/navigation";
-import { unstable_cache } from 'next/cache';
 
 export async function generateMetadata({ params }: { params: Promise<{ platformName: string }> }): Promise<Metadata> {
   const platformName = decodeURIComponent((await params).platformName);
@@ -21,12 +20,6 @@ export async function generateMetadata({ params }: { params: Promise<{ platformN
     },
   }
 }
-
-const getCachedPlatformData = unstable_cache(
-  async (platformName: string) => getPlatformData(platformName),
-  ['platform-data'],
-  { revalidate: 300 } // same as your old s-maxage=300
-);
 
 export default async function Platform({
   params,

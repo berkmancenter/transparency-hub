@@ -1,3 +1,4 @@
+import { unstable_cache } from 'next/cache';
 import { connectToDatabase } from './mongodb';
 import { Platform, Document as PolicyDocument } from '@/components/src/types';
 
@@ -89,3 +90,10 @@ export async function getPlatformData(platformName: string): Promise<{
     waybackIndex: buildWaybackIndex(documents, typeMapping),
   };
 }
+
+// Shared by the platform and policy document pages so they hit the same cache entry
+export const getCachedPlatformData = unstable_cache(
+  async (platformName: string) => getPlatformData(platformName),
+  ['platform-data'],
+  { revalidate: 300 } // same as your old s-maxage=300
+);
